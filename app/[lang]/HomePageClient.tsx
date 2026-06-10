@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Menu } from "lucide-react"
 import { LineShadowText } from "@/components/line-shadow-text"
 import { ShimmerButton } from "@/components/shimmer-button"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Menu } from "lucide-react"
 import { useState } from "react"
 
 export default function HomePageClient({ dictionary }: { dictionary: any }) {
@@ -274,25 +274,25 @@ export default function HomePageClient({ dictionary }: { dictionary: any }) {
           <div className="hidden md:flex items-center space-x-6">
             <a
               href="#"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors shimmer-text-container"
             >
               言启智云
             </a>
             <a
               href="#"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors shimmer-text-container"
             >
               语枢未来
             </a>
             <a
               href="#"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors shimmer-text-container"
             >
               深栈智启
             </a>
             <a
               href="#"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors shimmer-text-container"
             >
               万象归元
             </a>
@@ -336,7 +336,7 @@ export default function HomePageClient({ dictionary }: { dictionary: any }) {
         {/* Trial Badge */}
         <div className="mb-4 sm:mb-8 pl-[155px] sm:pl-0">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 sm:px-4 py-2">
-            <span className="text-white text-xs md:text-xs">{"万象归元于云枢丨深栈智启新纪元"}</span>
+            <span className="text-white text-xs md:text-xs shimmer-text-container">{"万象归元于云枢丨深栈智启新纪元"}</span>
           </div>
         </div>
 

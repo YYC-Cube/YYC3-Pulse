@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -118,6 +118,18 @@
     }
   }
 
+  /* Text shimmer animation for nav items and badge */
+  --animate-shimmer-text: shimmer-text 3s ease-in-out infinite;
+
+  @keyframes shimmer-text {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -163,4 +175,31 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Shimmer text container */
+.shimmer-text-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.shimmer-text-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 70%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-text 3s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+  will-change: background-position;
 }
