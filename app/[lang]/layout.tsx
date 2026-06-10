@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 
+import { PWAProvider } from "@/components/pwa/PWAProvider";
 import { i18n } from "../lib/i18n-config";
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -91,8 +92,18 @@ export default async function RootLayout({
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
         <link rel="dns-prefetch" href={baseUrl} />
+        {/* iOS PWA Support */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="YYC³" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        {/* iOS Splash Screen */}
+        <link rel="apple-touch-startup-image" href="/icons/icon-512.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <PWAProvider />
+      </body>
     </html>
   );
 }

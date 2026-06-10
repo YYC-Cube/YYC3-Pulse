@@ -1,16 +1,27 @@
 {
   "name": "YYC³ Pulse",
   "short_name": "YYC³",
-  "description": "万象归元于云枢 | 深栈智启新纪元",
+  "description": "万象归元于云枢 | 深栈智启新纪元 — All Realms Converge at Cloud Nexus, DeepStack Ignites a New Era.",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
   "background_color": "#000000",
   "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities", "developer-tools"],
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
   "icons": [
-    { "src": "/icons/icon-16.png", "sizes": "16x16", "type": "image/png" },
-    { "src": "/icons/icon-32.png", "sizes": "32x32", "type": "image/png" },
-    { "src": "/icons/icon-64.png", "sizes": "64x64", "type": "image/png" },
-    { "src": "/icons/icon-256.png", "sizes": "256x256", "type": "image/png" },
-    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
-  ]
+    { "src": "/icons/icon-16.png", "sizes": "16x16", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-32.png", "sizes": "32x32", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-64.png", "sizes": "64x64", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-256.png", "sizes": "256x256", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [],
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
 }

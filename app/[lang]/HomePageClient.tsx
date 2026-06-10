@@ -1,13 +1,16 @@
 'use client'
 
+import { AIAssistant } from "@/components/ai-assistant"
 import { LineShadowText } from "@/components/line-shadow-text"
 import { ShimmerButton } from "@/components/shimmer-button"
 import { Button } from "@/components/ui/button"
+import { useIsMobile } from "@/components/ui/use-mobile"
 import { ArrowRight, Menu } from "lucide-react"
 import { useState } from "react"
 
 export default function HomePageClient({ dictionary }: { dictionary: any }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const isMobile = useIsMobile()
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -267,7 +270,7 @@ export default function HomePageClient({ dictionary }: { dictionary: any }) {
                 WebkitMask: 'url(/logo-mark-white.png) center/contain no-repeat',
               }}
             />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-linear-to-r from-white to-orange-500 bg-clip-text text-transparent">
               YYC³
             </span>
           </div>
@@ -356,12 +359,14 @@ export default function HomePageClient({ dictionary }: { dictionary: any }) {
           DeepStack Ignites a New Era.
         </p>
 
-        <Button className="group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base md:text-xs lg:text-lg font-semibold flex items-center gap-2 backdrop-blur-sm border border-orange-400/30 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
+        <Button className="group relative bg-linear-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base md:text-xs lg:text-lg font-semibold flex items-center gap-2 backdrop-blur-sm border border-orange-400/30 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
           YYCC
           <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-rotate-12 transition-transform duration-300" />
-          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 rounded-lg bg-linear-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </Button>
       </main>
+
+      <AIAssistant isMobile={isMobile} />
     </div>
   )
 }
