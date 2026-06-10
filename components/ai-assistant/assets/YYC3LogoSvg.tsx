@@ -6,7 +6,7 @@
 
 import React from "react";
 
-const logoSrc = "/yyc3-logo-blue/android/playstore-icon.png";
+const logoSrc = "/yyc3-icons/android/playstore-icon.png";
 
 interface YYC3LogoSvgProps {
   size?: number;
