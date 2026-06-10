@@ -258,8 +258,18 @@ export default function HomePageClient({ dictionary }: { dictionary: any }) {
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-10 px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            {/* Logo removed as requested */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 shrink-0"
+              style={{
+                background: 'linear-gradient(135deg, #ffffff 0%, #f97316 100%)',
+                mask: 'url(/logo-mark-white.png) center/contain no-repeat',
+                WebkitMask: 'url(/logo-mark-white.png) center/contain no-repeat',
+              }}
+            />
+            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-white to-orange-500 bg-clip-text text-transparent">
+              YYC³
+            </span>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <a

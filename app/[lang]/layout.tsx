@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     images: [
       {
-        url: `${baseUrl}/yyc3-logo.png`,
+        url: `${baseUrl}/YYC3-Family-001.png`,
         width: 1200,
         height: 630,
         alt: "YYC³ Pulse",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "YYC³ Pulse",
     description:
       "万象归元于云枢 | 深栈智启新纪元 — All Realms Converge at Cloud Nexus, DeepStack Ignites a New Era.",
-    images: [`${baseUrl}/yyc3-logo.png`],
+    images: [`${baseUrl}/YYC3-Family-001.png`],
   },
   icons: {
     icon: [
